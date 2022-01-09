@@ -1,0 +1,62 @@
+{
+    "SrtReceivers": [
+        {
+            "id": "0.0.0.0:5001",
+            "state": "connected",
+            "stats": {
+                "time": 2871,
+                "window": {
+                    "flow": 8192,
+                    "congestion": 8192,
+                    "flight": 0
+                },
+                "link": {
+                    "rtt": 63.232,
+                    "mbpsBandwidth": 1039.61,
+                    "mbpsMaxBandwidth": 1000
+                },
+                "recv": {
+                    "packetsReceived": 1260,
+                    "packetsLost": 0,
+                    "packetsDropped": 0,
+                    "packetsBelated": 0,
+                    "NAKsSent": 0,
+                    "bytesReceived": 1713600,
+                    "bytesLost": 0,
+                    "bytesDropped": 0,
+                    "mbpsRate": 4.77388
+                }
+            }
+        },
+        {
+            "id": "0.0.0.0:5002",
+            "state": "connected",
+            "stats": {
+                "time": 2871,
+                "window": {
+                    "flow": 8192,
+                    "congestion": 8192,
+                    "flight": 0
+                },
+                "link": {
+                    "rtt": 63.232,
+                    "mbpsBandwidth": 2500.11,
+                    "mbpsMaxBandwidth": 1000
+                },
+                "recv": {
+                    "packetsReceived": 1260,
+                    "packetsLost": 500,
+                    "packetsDropped": 0,
+                    "packetsBelated": 0,
+                    "NAKsSent": 0,
+                    "bytesReceived": 1713600,
+                    "bytesLost": 0,
+                    "bytesDropped": 0,
+                    "mbpsRate": 4.77388
+                }
+            }
+        }
+    ]
+}
+        
+    

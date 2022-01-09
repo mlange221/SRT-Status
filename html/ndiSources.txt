@@ -1,0 +1,81 @@
+
+Found 79 NDI sources:
+    CONTRIBUTION (AZL Cam1 6001)    172.32.154.22:5965
+    CONTRIBUTION (AZL Cam2 6002)    172.32.154.22:5964
+    CONTRIBUTION (AZL Cam3 6003)    172.32.154.22:5963
+    CONTRIBUTION (AZL Cam4 6004)    172.32.154.22:5962
+    CONTRIBUTION (Black)    172.32.154.22:5961
+    CONTRIBUTION (host24 5024)    172.32.154.22:5966
+    CONTRIBUTION (VMIX1F Output 1)    172.32.154.22:5967
+    CONTRIBUTION (VMIX2F PGM)    172.32.154.22:5969
+    IP-172-32-31-197 (1F Audio Meter)    172.32.31.197:6141
+    IP-172-32-31-197 (1F Multi Chime)    172.32.31.197:6084
+    IP-172-32-31-197 (2F Audio Meter)    172.32.31.197:6139
+    IP-172-32-31-197 (2F Chime Multi)    172.32.31.197:5961
+    IP-172-32-31-197 (3F Chime Multi)    172.32.31.197:5962
+    IP-172-32-31-197 (FS1 Out 30fps)    172.32.31.197:6106
+    IP-172-32-31-197 (FS2 Out 30fps)    172.32.31.197:6074
+    IP-172-32-31-197 (FS3 Out 30fps)    172.32.31.197:6119
+    IP-172-32-31-197 (FS4 Out 30fsp)    172.32.31.197:6079
+    IP-172-32-31-197 (Host Return 1A)    172.32.31.197:6058
+    IP-172-32-31-197 (Host Return 1B)    172.32.31.197:6051
+    IP-172-32-31-197 (Host Return 1C)    172.32.31.197:6057
+    IP-172-32-31-197 (Host Return 1D)    172.32.31.197:6056
+    IP-172-32-31-197 (Host Return 1E)    172.32.31.197:6065
+    IP-172-32-31-197 (Host Return 1F)    172.32.31.197:6066
+    IP-172-32-31-197 (Host Return 2A)    172.32.31.197:6082
+    IP-172-32-31-197 (Host Return 2B)    172.32.31.197:6064
+    IP-172-32-31-197 (Host Return 2C)    172.32.31.197:6086
+    IP-172-32-31-197 (Host Return 2D)    172.32.31.197:6062
+    IP-172-32-31-197 (Host Return 2E)    172.32.31.197:6081
+    IP-172-32-31-197 (Host Return 2F)    172.32.31.197:6068
+    IP-172-32-31-197 (MV 1F Host Returns)    172.32.31.197:5994
+    IP-172-32-31-197 (MV 2F Host Returns)    172.32.31.197:6046
+    IP-172-32-31-197 (MV AZL Studio)    172.32.31.197:6112
+    IP-172-32-31-197 (MV FS Outs)    172.32.31.197:6091
+    IP-172-32-31-197 (MV Prime Day)    172.32.31.197:6054
+    IP-172-32-31-197 (Studio PGM)    172.32.31.197:6122
+    IP-172-32-31-197 (Test Pattern)    172.32.31.197:6099
+    IP-172-32-31-197 (VIrtual Test Page)    172.32.31.197:6110
+    VMIX1F (Audio Microphone)    172.32.180.36:5974
+    VMIX1F (Call 2177727271)    172.32.180.36:5980
+    VMIX1F (Call 3155816182)    172.32.180.36:5979
+    VMIX1F (Call 3854418348)    172.32.180.36:5976
+    VMIX1F (Call 5661686763)    172.32.180.36:5978
+    VMIX1F (Call 6793554587)    172.32.180.36:5975
+    VMIX1F (Call 7882838721)    172.32.180.36:5977
+    VMIX1F (Clocks)    172.32.180.36:5981
+    VMIX1F (vMix - Output 1)    172.32.180.36:5961
+    VMIX1F (vMix - Output 2)    172.32.180.36:5962
+    VMIX1F (vMix - Output 3)    172.32.180.36:5963
+    VMIX1F (vMix - Output 4)    172.32.180.36:5964
+    VMIX1F (vMix Audio - Bus A)    172.32.180.36:5967
+    VMIX1F (vMix Audio - Bus B)    172.32.180.36:5968
+    VMIX1F (vMix Audio - Bus C)    172.32.180.36:5969
+    VMIX1F (vMix Audio - Bus D)    172.32.180.36:5970
+    VMIX1F (vMix Audio - Bus E)    172.32.180.36:5971
+    VMIX1F (vMix Audio - Bus F)    172.32.180.36:5972
+    VMIX1F (vMix Audio - Bus G)    172.32.180.36:5973
+    VMIX1F (vMix Audio - Headphones)    172.32.180.36:5966
+    VMIX1F (vMix Audio - Master)    172.32.180.36:5965
+    VMIX2F (Audio Microphone)    172.32.220.74:5974
+    VMIX2F (Call 0488764167)    172.32.220.74:5980
+    VMIX2F (Call 3250193386)    172.32.220.74:5976
+    VMIX2F (Call 3832164268)    172.32.220.74:5975
+    VMIX2F (Call 5202643571)    172.32.220.74:5978
+    VMIX2F (Call 6868378365)    172.32.220.74:5977
+    VMIX2F (Call 6945386447)    172.32.220.74:5979
+    VMIX2F (Clocks)    172.32.220.74:5981
+    VMIX2F (vMix - Output 1)    172.32.220.74:5961
+    VMIX2F (vMix - Output 2)    172.32.220.74:5962
+    VMIX2F (vMix - Output 3)    172.32.220.74:5963
+    VMIX2F (vMix - Output 4)    172.32.220.74:5964
+    VMIX2F (vMix Audio - Bus A)    172.32.220.74:5967
+    VMIX2F (vMix Audio - Bus B)    172.32.220.74:5968
+    VMIX2F (vMix Audio - Bus C)    172.32.220.74:5969
+    VMIX2F (vMix Audio - Bus D)    172.32.220.74:5970
+    VMIX2F (vMix Audio - Bus E)    172.32.220.74:5971
+    VMIX2F (vMix Audio - Bus F)    172.32.220.74:5972
+    VMIX2F (vMix Audio - Bus G)    172.32.220.74:5973
+    VMIX2F (vMix Audio - Headphones)    172.32.220.74:5966
+    VMIX2F (vMix Audio - Master)    172.32.220.74:5965

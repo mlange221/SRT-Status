@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Nimble Server Status</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+    <link href="sticky-footer.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Server Status</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item active" href="index.html">SRT Receiver Stats</a>
+                <a class="dropdown-item" href="sender.html">SRT Sender Stats</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+    <main role="main" class="flex-shrink-0">
+    <div class="container-md">
+        <div class="starter-template">
+            <h2>SRT Receiver Stats</h2>
+            <table id="srttable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th rowspan="2">Listener ID</th>
+                    <th rowspan="2">State</th>
+                    <th colspan="3">Stats</th>
+                </tr>
+               
+                    <th>RTT/Ping</th>
+                    <th>Bitrate(mbps)</th>
+                    <th>Retransmitted Packets</th>
+                    <th>Packet Loss %</th>
+                
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+        </div>
+        
+    </div>
+    </main>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Automatic Refresh: 5 seconds</span>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var table = $('#srttable').DataTable( {
+                "paging": false,
+                "ajax": {
+                    url: "http://172.32.158.47:8086/manage/srt_receiver_stats",
+                    dataSrc: 'SrtReceivers'
+                },
+                "columns": [
+                    {data: 'id'},
+                    {data: 'state'},
+                    {
+                      data: 'stats.link.rtt',
+                      defaultContent: "0.0"
+                    },
+                    {data: 'stats.recv.mbpsRate',
+                     render: function (data, type, row) {
+                         return (data)
+                     },
+                     defaultContent: ""
+                    },
+                    {data: 'stats.recv.packetsReceivedRetransmitted',
+                     defaultContent: "N/A"
+                    },
+                    {data: 'stats.recv',
+                     defaultContent: "N/A",
+                     render: function(data, type, row){
+                        if (data == null) { return 'N/A'}
+                        else { return ((data.packetsLost / data.packetsReceived)*100).toFixed(2)}
+                    },
+                    }
+                ]
+            })
+
+            //reload the page every 5 seconds
+            setInterval ( function() {
+                table.ajax.reload( null, false)}, 5000
+            )
+        })
+    </script>
+
+  </body>
+</html>
